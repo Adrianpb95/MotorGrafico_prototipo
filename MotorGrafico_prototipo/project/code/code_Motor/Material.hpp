@@ -1,0 +1,120 @@
+/*
+ADRIAN PONCE BALSEIRO
+ESNE G4.3 DDVJ
+adrianpb95@gmail.com
+10 / 06 / 2018
+*/
+
+
+#ifndef MATERIAL_HEADERS
+#define MATERIAL_HEADERS
+
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+	#include <memory>
+	#include "Shader_Program.hpp"
+	#include "Vertex_Shader.hpp"
+	#include "Fragment_Shader.hpp"
+	#include "Material_Shaders.hpp"
+
+extern "C"
+{
+	#include "targa.h"
+}
+
+////////////////////////////////////////////////////////////
+// NameSpaces
+////////////////////////////////////////////////////////////
+namespace example
+{
+	class Color_Buffer_Rgba8888;
+	typedef Color_Buffer_Rgba8888 Texture;
+	class Material
+	{
+		////////////////////////////////////////////////////////////
+		// Declaracion de variables			
+		////////////////////////////////////////////////////////////
+
+	private:
+
+		std::shared_ptr< Texture > texture;			///<Color buffer para la textura
+
+		bool   has_texture;							///<El material tiene textura (?)
+		GLuint texture_id;							///<ID del buffer de textura
+
+		GLint model_view_matrix_id;					///<ID para la matriz de transformacion
+		GLint projection_matrix_id;					///<ID para la matriz de proyeccion
+		GLint normal_matrix_id;						///<ID para la matriz de normales
+		
+		Shader_Program shader_program;				///<Shader que va a usar este material
+
+
+		////////////////////////////////////////////////////////////
+		// Declaracion de funciones			
+		////////////////////////////////////////////////////////////
+
+	public:
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Constructor de Material:	Compila los shaders y la textura pasada por parametros
+		///	@param	path						Ruta de la textura
+		////////////////////////////////////////////////////////////
+		Material(const char * path);
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Destructor de Material: Se liberan la textura
+		////////////////////////////////////////////////////////////
+		~Material();
+		
+		////////////////////////////////////////////////////////////
+		/// \brief	Configura la luz del shader
+		////////////////////////////////////////////////////////////
+		void configure_light();
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Getter de la textura
+		////////////////////////////////////////////////////////////
+		std::shared_ptr< Texture > get_texture() { return texture;	}
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Getter del ID de la matriz de transformacion
+		////////////////////////////////////////////////////////////
+		GLint get_model_view_id()				 { return model_view_matrix_id;  }		
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Getter del ID de la matriz de proyeccion
+		////////////////////////////////////////////////////////////
+		GLint get_projection_id()				 { return projection_matrix_id;  }
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Getter del ID de la matriz de normales
+		////////////////////////////////////////////////////////////
+		GLint get_normal_matrix_id()			 { return normal_matrix_id;		 }
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Configura la luz para dicho material y activa su shader
+		////////////////////////////////////////////////////////////
+		void use()
+		{			
+			shader_program.use();
+			configure_light();
+
+			if (has_texture)
+			{
+				glBindTexture(GL_TEXTURE_2D, texture_id);
+			}
+		}
+
+		
+
+	private:
+		////////////////////////////////////////////////////////////
+		/// \brief	Carga la textura copiando los pixeles en el buffer de textura
+		///	@param	texture_file_path		Ruta de la textura
+		////////////////////////////////////////////////////////////
+		std::shared_ptr< Texture > load_texture(const char * texture_file_path);
+	};
+}
+#endif
+

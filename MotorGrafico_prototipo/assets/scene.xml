@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<scene name = "Engine Motor: Demo" width = "800" height = "600">  
+	<entity name="game_manager">			
+		<component type="event" >
+		</component> 			
+	</entity>    		
+
+	<entity name="player">			
+		<component type="transform" pos_x = "0" pos_y = "-2" pos_z = "-5" rot_x = "0" rot_y = "1" rot_z = "0" angle = "0" scale = "0.5"></component>
+		<component type="render" name="robot" mesh_path= "../../../assets/robot.obj" material_path = "../../../assets/wood-crate-1.tga"></component>
+		<entity name = "child">
+				<component type="transform" pos_x = "0" pos_y = "5" pos_z = "0" rot_x = "0" rot_y = "1" rot_z = "0" angle = "0.5" scale = "1"></component>
+				<component type="render" name="silla" mesh_path= "../../../assets/chair.obj" material_path = "../../../assets/wood-crate-1.tga" child = "true"></component>
+		</entity>		
+	</entity>	 		
+		    
+	<entity name="cube1">			
+		<component type="transform" pos_x = "0" pos_y = "1.5" pos_z = "-5" rot_x = "0" rot_y = "1" rot_z = "0" angle = "1" scale = "0.005"></component>
+		<component type="render" name="cube1" mesh_path= "../../../assets/cube.obj" material_path = "../../../assets/1.tga"></component> 				
+	</entity>    	
+
+	<entity name="cube2">			
+		<component type="transform" pos_x = "2.5" pos_y = "0" pos_z = "-5" rot_x = "0" rot_y = "1" rot_z = "0" angle = "1" scale = "0.005"></component>
+		<component type="render" name="cube2" mesh_path= "../../../assets/cube.obj" material_path = "../../../assets/2.tga"></component>  
+	</entity> 
+
+	<entity name="cube3">
+		<component type="transform" pos_x = "2" pos_y = "-2" pos_z = "-5" rot_x = "0" rot_y = "1" rot_z = "0" angle = "1" scale = "0.005"></component>
+		<component type="render" name="cube3" mesh_path= "../../../assets/cube.obj" material_path = "../../../assets/3.tga"></component> 
+	</entity> 
+
+	<entity name="cube4">			
+		<component type="transform" pos_x = "-2" pos_y = "-2" pos_z = "-5" rot_x = "0" rot_y = "1" rot_z = "0" angle = "1" scale = "0.005"></component>
+		<component type="render" name="cube4" mesh_path= "../../../assets/cube.obj" material_path = "../../../assets/4.tga"></component>
+	</entity> 
+
+	<entity name="cube5">			
+		<component type="transform" pos_x = "-2.5" pos_y = "0" pos_z = "-5" rot_x = "0" rot_y = "1" rot_z = "0" angle = "1" scale = "0.005"></component>
+		<component type="render" name="cube5" mesh_path= "../../../assets/cube.obj" material_path = "../../../assets/5.tga"></component>  			
+	</entity> 
+</scene>

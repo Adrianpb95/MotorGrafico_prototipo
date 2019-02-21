@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{9752c339-df3f-42ab-89ce-03c65d45a7f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Message_Manager">
+      <UniqueIdentifier>{a442c3c1-8b85-4ede-97dd-a1d3db7cd716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render_Manager">
+      <UniqueIdentifier>{d71386de-9002-4493-8e7e-4539420e8428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render_Manager\Render_Tools">
+      <UniqueIdentifier>{488565bd-bba5-427c-aab4-c17d05531132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Transform_Manager">
+      <UniqueIdentifier>{77166f42-ce16-42b3-baae-15162d4fe44c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Events_Manager">
+      <UniqueIdentifier>{ec5a3563-fa51-4a93-ba86-c817895382d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{6c1a79a5-02b8-4615-b459-589da3fc7418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\targa">
+      <UniqueIdentifier>{248933dc-0b11-46cd-a1a6-71c1c1356912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\C++ Toolkit">
+      <UniqueIdentifier>{a4ba7441-4a15-428f-b9e5-1962397ab07c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\code\code_Motor\Component.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Entity.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Kernel.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Module.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Module_Factory.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Task.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\View.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Scene.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Event_Component.hpp">
+      <Filter>Events_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Event_Module.hpp">
+      <Filter>Events_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Event_Task.hpp">
+      <Filter>Events_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Render_Component.hpp">
+      <Filter>Render_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Render_Module.hpp">
+      <Filter>Render_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Render_Task.hpp">
+      <Filter>Render_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Transform_Component.hpp">
+      <Filter>Transform_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Transform_Module.hpp">
+      <Filter>Transform_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Transform_Task.hpp">
+      <Filter>Transform_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Vertex_Shader.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Camera.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Color_Buffer.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Color_Buffer_Rgba8888.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Fragment_Shader.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Material.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Material_Shaders.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Mesh.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Shader.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Shader_Program.hpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Dispatcher.hpp">
+      <Filter>Message_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Message.hpp">
+      <Filter>Message_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\code\code_Motor\Event_Updater.hpp">
+      <Filter>Events_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Algorithms.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Array.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Char.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Cloneable.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Coordinates.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Decoder.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Encoder.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\File_Reader.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\File_Writer.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Input_Stream.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\macros.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Matrix.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Memory_Reader.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Memory_Writer.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Non_Copyable.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Obfuscation_Decoder.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Obfuscation_Encoder.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Object_Pool.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Output_Stream.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Point.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Pointer.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Projection.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Random_Generator.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Reader.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Rotation.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Scaling.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Seekable.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Shared_Ptr.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Stream.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\String.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Transformation.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Translation.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\types.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Vector.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Void_Decoder.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Void_Encoder.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\libraries\cpp-toolkit\headers\Writer.hpp">
+      <Filter>Tools\C++ Toolkit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\libraries\targa\include\targa.h">
+      <Filter>Tools\targa</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\code\code_Motor\Component.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Entity.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Kernel.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Scene.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Task.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\View.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Event_Task.cpp">
+      <Filter>Events_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Event_Module.cpp">
+      <Filter>Events_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Render_Component.cpp">
+      <Filter>Render_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Render_Module.cpp">
+      <Filter>Render_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Render_Task.cpp">
+      <Filter>Render_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Transform_Component.cpp">
+      <Filter>Transform_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Transform_Module.cpp">
+      <Filter>Transform_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Transform_Task.cpp">
+      <Filter>Transform_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Material.cpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Mesh.cpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Shader.cpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Shader_Program.cpp">
+      <Filter>Render_Manager\Render_Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\code\code_Motor\Event_Updater.cpp">
+      <Filter>Events_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\libraries\targa\src\targa.c">
+      <Filter>Tools\targa</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

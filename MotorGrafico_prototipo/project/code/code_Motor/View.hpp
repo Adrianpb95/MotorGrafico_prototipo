@@ -1,0 +1,115 @@
+
+/*	
+ADRIAN PONCE BALSEIRO
+ESNE G4.3 DDVJ
+adrianpb95@gmail.com
+3 / 07 / 2018
+*/
+
+#ifndef VIEW_HEADER
+#define VIEW_HEADER
+
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
+#include "Camera.hpp"
+#include "Material.hpp"
+#include <string>
+#include <SFML/Window.hpp>
+#include <iostream>
+#include "Mesh.hpp"
+#include <map>
+
+////////////////////////////////////////////////////////////
+// NameSpaces
+////////////////////////////////////////////////////////////
+using namespace std;
+using namespace sf;
+namespace example
+{
+
+    class View
+    {
+
+		////////////////////////////////////////////////////////////
+		// Declaracion de variables			
+		////////////////////////////////////////////////////////////
+
+    private:
+
+		shared_ptr< Camera > camera;							///<Elemento camara de la escena
+		unique_ptr< Mesh >  mesh;								///<Elemento silla de la escena
+
+		map<string, shared_ptr< Material>> materials;			///<Contenedor de materiales
+			
+		Window  * window;										///<Ventana creada con sfml
+
+        int    width;											///<Ancho ventana			
+        int    height;											///<Alto ventana
+
+
+		////////////////////////////////////////////////////////////
+		// Declaracion de funciones			
+		////////////////////////////////////////////////////////////
+
+    public:
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Constructor de View:	Crea la escena a renderizar y el postproceso de toda la ventana
+		///	@param	width		Ancho de la ventana
+		///	@param	height		Alto de la ventana
+		////////////////////////////////////////////////////////////
+        View(const string & name, int width, int height);
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Configura el tamaño de la ventana
+		///	@param	width		Ancho de la ventana
+		///	@param	height		Alto de la ventana
+		////////////////////////////////////////////////////////////
+        void resize   (int width, int height);
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Limpia los buffers de la ventana
+		////////////////////////////////////////////////////////////
+		void clear_view()
+		{
+			glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+		}
+
+		////////////////////////////////////////////////////////////
+		/// \brief	Muestra la ventana
+		////////////////////////////////////////////////////////////
+		void display_view()
+		{
+			window->display();
+		}
+
+		////////////////////////////////////////////////////////////
+		/// \brief	 SETTER de material y actualizacion de los materiales de la ventana mediante resize
+		////////////////////////////////////////////////////////////
+		void set_material(string name, shared_ptr<Material> material)
+		{
+			materials[name] = material;
+			this->resize(width, height);
+		}
+
+		////////////////////////////////////////////////////////////
+		/// \brief	 GETTER de la matriz de transformacion de la camara
+		////////////////////////////////////////////////////////////
+		glm::mat4 get_camera_model_view()
+		{
+			return camera->get_model_view();
+		}
+
+		////////////////////////////////////////////////////////////
+		/// \brief	 GETTER de la ventana de sfml
+		////////////////////////////////////////////////////////////
+		Window * get_window()
+		{
+			return window;
+		}
+    };
+
+}
+
+#endif
